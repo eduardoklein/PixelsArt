@@ -16,4 +16,6 @@ function colorChange() {
 
  buttonColorChange.addEventListener('click', colorChange);
 
-
+function salvarLocalStorage() {
+    localStorage.setItem('color-palette', randomColor);
+}

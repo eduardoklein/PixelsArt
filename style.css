@@ -6,13 +6,10 @@ body {
     font-size: large;
 }
 
-#color-palette {
+.color {
     border: 1px solid black;
     height: 50px;
     width: 50px;
-}
-
-.color {
     display: inline-block;
 }
 
