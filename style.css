@@ -13,6 +13,21 @@ body {
 }
 
 .color {
-    background-color: red;
     display: inline-block;
+}
+
+.preto {
+    background-color: black;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.verde {
+    background-color: green;
+}
+
+.azul {
+    background-color: blue;
 }
