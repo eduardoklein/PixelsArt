@@ -34,9 +34,6 @@ body {
     height: 40px;
     border: 1px solid black;
     background-color: white;
-}
-
-.coluna {
     display: inline-block;
 }
 
