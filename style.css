@@ -37,3 +37,9 @@ body {
     display: inline-block;
 }
 
+.selected {
+    outline: 1px red;
+    outline-offset: 1px;
+    outline-style: solid;
+}
+

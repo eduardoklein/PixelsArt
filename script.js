@@ -3,6 +3,8 @@ const buttonColorChange = document.getElementById('button-random-color');
 const coluna = document.getElementById('coluna');
 const pixel = document.getElementById('pixel');
 const pixelBoard = document.getElementById('pixel-board');
+const corPreta  = document.querySelector('.preto');
+
 
 
 function colorChange() {
@@ -48,3 +50,8 @@ for (index = 1; index <= 5; index += 1){
     }
     pixelBoard.appendChild(coluna);
 }
+
+function selecionarPreto(event) {
+    corPreta.classList.add('selected')}
+    
+window.addEventListener('load', selecionarPreto);
