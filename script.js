@@ -1,5 +1,9 @@
 const randomColor = document.querySelectorAll('.color');
 const buttonColorChange = document.getElementById('button-random-color');
+const coluna = document.getElementById('coluna');
+const pixel = document.getElementById('pixel');
+const pixelBoard = document.getElementById('pixel-board');
+
 
 function colorChange() {
     let colorHex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
@@ -12,8 +16,8 @@ function colorChange() {
     }  
     saveInLocalStorage();
 }
-
 buttonColorChange.addEventListener('click', colorChange);
+
 
 function saveInLocalStorage(){
     const color1 = randomColor[1].style.backgroundColor;
@@ -21,7 +25,6 @@ function saveInLocalStorage(){
     const color3 = randomColor[3].style.backgroundColor;
     localStorage.setItem('colorPalette', JSON.stringify([color1, color2, color3]));
 }
-
 function recoveryPalette(){
     const recoveryParams = JSON.parse(localStorage.getItem('colorPalette'));
     if (recoveryParams != null) {
@@ -32,6 +35,17 @@ function recoveryPalette(){
  
 
 }
-
 window.addEventListener('load', recoveryPalette);
+
+
+for (index = 1; index <= 5; index += 1){
+    const coluna = document.createElement('div');
+    coluna.classList.add('coluna');
+    for (i = 1; i <= 5; i += 1){
+        const pixel = document.createElement('div');
+        pixel.classList.add('pixel');
+        coluna.appendChild(pixel);
+    }
+    pixelBoard.appendChild(coluna);
+}
 
