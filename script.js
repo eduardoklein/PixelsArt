@@ -3,7 +3,10 @@ const buttonColorChange = document.getElementById('button-random-color');
 const coluna = document.getElementById('coluna');
 const pixel = document.getElementById('pixel');
 const pixelBoard = document.getElementById('pixel-board');
-const corPreta  = document.querySelector('.preto');
+const defaultBlack  = document.querySelector('.preto');
+const colorPalette = document.querySelector('#color-palette');
+const colorSelected = document.querySelectorAll('.color');
+
 
 
 
@@ -52,6 +55,21 @@ for (index = 1; index <= 5; index += 1){
 }
 
 function selecionarPreto(event) {
-    corPreta.classList.add('selected')}
-    
+    defaultBlack.classList.add('selected')
+}
 window.addEventListener('load', selecionarPreto);
+
+function selectedColor (event){
+    if (colorSelected[0].classList.contains('selected') || colorSelected[1].classList.contains('selected') || colorSelected[2].classList.contains('selected') ||colorSelected[3].classList.contains('selected')  ){
+        colorSelected[0].classList.remove('selected');
+        colorSelected[1].classList.remove('selected')
+        colorSelected[2].classList.remove('selected')
+        colorSelected[3].classList.remove('selected')
+        console.log('entrou');
+    }
+    event.target.classList.add('selected');
+}
+colorSelected[0].addEventListener('click', selectedColor);
+colorSelected[1].addEventListener('click', selectedColor);
+colorSelected[2].addEventListener('click', selectedColor);
+colorSelected[3].addEventListener('click', selectedColor);
