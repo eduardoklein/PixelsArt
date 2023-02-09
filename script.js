@@ -65,7 +65,6 @@ function selectedColor (event){
         colorSelected[1].classList.remove('selected')
         colorSelected[2].classList.remove('selected')
         colorSelected[3].classList.remove('selected')
-        console.log('entrou');
     }
     event.target.classList.add('selected');
 }
@@ -73,3 +72,5 @@ colorSelected[0].addEventListener('click', selectedColor);
 colorSelected[1].addEventListener('click', selectedColor);
 colorSelected[2].addEventListener('click', selectedColor);
 colorSelected[3].addEventListener('click', selectedColor);
+
+// https://www.javascripttutorial.net/dom/css/check-if-an-element-contains-a-class/
